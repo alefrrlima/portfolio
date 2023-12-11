@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Portfolio from './components/Portfolio';
+
+import theme from './styles/theme';
+
+export default function () {
+   const GlobalStyle = createGlobalStyle`
+    * {
+      margin: 0;
+      border: 0;
+      padding: 0;
+      outline: 0;
+      appearance: none;
+      list-style: none;
+      text-decoration: none;
+      box-sizing: border-box;
+      color: #000;
+      font-size: 1rem;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  `;
+
+   return (
+      <ThemeProvider theme={theme}>
+         <GlobalStyle />
+         <Portfolio />
+      </ThemeProvider>
+   );
 }
-
-export default App;
