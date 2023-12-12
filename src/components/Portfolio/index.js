@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Text from '../../ui/Text';
+import Home from '../Home';
 
 import dotedBackground from '../../images/doted-background.png';
 
@@ -13,18 +14,13 @@ export default function () {
       flex-direction: column;
       background: url(${dotedBackground});
       background-repeat: repeat;
-      padding: 2rem;
+      padding-right: ${(props) => props.theme.mensure.single};
+      padding-left: ${(props) => props.theme.mensure.single};
    `;
 
    return (
       <Portfolio>
-         <Text type="D1">Opa</Text>
-         <Text type="D2">Opa</Text>
-         <Text type="D3">Opa</Text>
-         <Text type="D4">Opa</Text>
-         <Text type="D5">Opa</Text>
-         <Text type="H1">Opa</Text>
-         <Text type="P">Opa</Text>
+         <Home />
       </Portfolio>
    );
 }
