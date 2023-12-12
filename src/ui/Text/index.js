@@ -3,15 +3,17 @@ import styled from 'styled-components';
 
 export default function Text({ type, children }) {
    const D1 = styled.span`
+      margin-left: ${(props) => props.theme.mensure.double};
+      margin-right: ${(props) => props.theme.mensure.double};
       font-size: ${(props) => props.theme.size.extra};
       font-weight: ${(props) => props.theme.weight.small};
-      line-height: ${(props) => props.theme.height.extra};
+      line-height: ${(props) => props.theme.height.fit};
       color: ${(props) => props.theme.color.dark};
    `;
    const D2 = styled.span`
       font-size: ${(props) => props.theme.size.large};
       font-weight: ${(props) => props.theme.weight.small};
-      line-height: ${(props) => props.theme.height.large};
+      line-height: ${(props) => props.theme.height.fit};
       color: ${(props) => props.theme.color.light};
    `;
    const D3 = styled.span`

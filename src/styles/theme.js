@@ -27,6 +27,7 @@ const theme = {
       medium: '3.4375rem',
       large: '5.9375rem',
       extra: '7.8125rem',
+      fit: '80%',
    },
 };
 
