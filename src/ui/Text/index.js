@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Text({ type, children }) {
+export default function Text({ type, children, align }) {
    const D1 = styled.span`
       margin-left: ${(props) => props.theme.mensure.double};
       margin-right: ${(props) => props.theme.mensure.double};
@@ -9,18 +9,21 @@ export default function Text({ type, children }) {
       font-weight: ${(props) => props.theme.weight.small};
       line-height: ${(props) => props.theme.height.fit};
       color: ${(props) => props.theme.color.dark};
+      text-align: ${align};
    `;
    const D2 = styled.span`
       font-size: ${(props) => props.theme.size.large};
       font-weight: ${(props) => props.theme.weight.small};
       line-height: ${(props) => props.theme.height.fit};
       color: ${(props) => props.theme.color.light};
+      text-align: ${align};
    `;
    const D3 = styled.span`
       font-size: ${(props) => props.theme.size.medium};
       font-weight: ${(props) => props.theme.weight.small};
       line-height: ${(props) => props.theme.height.medium};
       color: ${(props) => props.theme.color.primary};
+      text-align: ${align};
    `;
    const D4 = styled.span`
       font-size: ${(props) => props.theme.size.regular};
@@ -31,6 +34,7 @@ export default function Text({ type, children }) {
       border: 1px solid ${(props) => props.theme.color.light};
       width: fit-content;
       text-transform: uppercase;
+      text-align: ${align};
    `;
    const D5 = styled.span`
       font-size: ${(props) => props.theme.size.regular};
@@ -38,18 +42,21 @@ export default function Text({ type, children }) {
       line-height: ${(props) => props.theme.height.regular};
       color: ${(props) => props.theme.color.primary};
       text-transform: uppercase;
+      text-align: ${align};
    `;
    const H1 = styled.span`
       font-size: ${(props) => props.theme.size.medium};
       font-weight: ${(props) => props.theme.weight.small};
       line-height: ${(props) => props.theme.height.medium};
       color: ${(props) => props.theme.color.dark};
+      text-align: ${align};
    `;
    const P = styled.span`
       font-size: ${(props) => props.theme.size.regular};
       font-weight: ${(props) => props.theme.weight.regular};
       line-height: ${(props) => props.theme.height.regular};
       color: ${(props) => props.theme.color.dark};
+      text-align: ${align};
    `;
 
    switch (type) {

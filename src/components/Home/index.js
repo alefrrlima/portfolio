@@ -12,23 +12,27 @@ export default function () {
       align-items: center;
       justify-content: center;
       width: 100%;
+      max-width: 1440px;
       height: 100vh;
       gap: ${(props) => props.theme.mensure.triple};
    `;
 
-   const PortfolioCircle = styled(CircleSVG)``;
+   const PortfolioCircle = styled(CircleSVG)`
+      transform: translateY(-11px);
+   `;
 
    const TextContainer = styled.div`
       display: flex;
       flex-direction: column;
       gap: ${(props) => props.theme.mensure.single};
+      min-width: 602px;
+      width: 55vw;
    `;
 
-   const TitleContainer = styled.div`
+   const ComplementContainer = styled.div`
       display: flex;
       flex-direction: column;
       gap: ${(props) => props.theme.mensure.half};
-      height: 96px;
    `;
 
    const DarkSquare = styled.div`
@@ -41,7 +45,7 @@ export default function () {
       padding-right: ${(props) => props.theme.mensure.double};
       padding-bottom: ${(props) => props.theme.mensure.single};
       padding-left: ${(props) => props.theme.mensure.double};
-      gap: ${(props) => props.theme.mensure.single};
+      gap: ${(props) => props.theme.mensure.double};
 
       :first-child {
          margin: 0 !important;
@@ -56,17 +60,15 @@ export default function () {
       <Home>
          <PortfolioCircle />
          <TextContainer>
-            <Text type="d1" my="half" mx="">
-               Alexandre
-            </Text>
+            <Text type="d1" align='end'>Alexandre</Text>
             <DarkSquare>
                <Text type="d2">Ferreira</Text>
                <Text type="d2">Lima</Text>
             </DarkSquare>
-            <TitleContainer>
+            <ComplementContainer>
                <Text type="d3">Desenvolvedor</Text>
                <Text type="d3">Front-end</Text>
-            </TitleContainer>
+            </ComplementContainer>
          </TextContainer>
       </Home>
    );
