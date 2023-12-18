@@ -3,8 +3,6 @@ import styled from 'styled-components';
 
 export default function Text({ type, children, align }) {
    const D1 = styled.span`
-      margin-left: ${(props) => props.theme.mensure.double};
-      margin-right: ${(props) => props.theme.mensure.double};
       font-size: ${(props) => props.theme.size.extra};
       font-weight: ${(props) => props.theme.weight.small};
       line-height: ${(props) => props.theme.height.fit};
