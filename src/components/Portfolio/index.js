@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Home from '../Home';
 import About from '../About';
+import Tecnologies from '../Tecnologies';
 
 import dotedBackground from '../../images/doted-background.png';
 
@@ -15,14 +16,15 @@ export default function () {
       flex-direction: column;
       background: url(${dotedBackground});
       background-repeat: repeat;
-      padding-right: ${(props) => props.theme.mensure.double};
-      padding-left: ${(props) => props.theme.mensure.double};
+
+      gap: ${(props) => props.theme.mensure.extra};
    `;
 
    return (
       <Portfolio>
          <Home />
          <About />
+         <Tecnologies />
       </Portfolio>
    );
 }

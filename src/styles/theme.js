@@ -9,6 +9,7 @@ const theme = {
       single: '1rem',
       double: '2rem',
       triple: '3rem',
+      extra: '6rem',
    },
    size: {
       small: '1rem',

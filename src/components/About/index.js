@@ -17,6 +17,8 @@ export default function () {
       width: 100%;
       max-width: 1440px;
       margin-top: ${(props) => props.theme.mensure.double};
+      padding-right: ${(props) => props.theme.mensure.double};
+      padding-left: ${(props) => props.theme.mensure.double};
    `;
 
    const TextContainer = styled.div`

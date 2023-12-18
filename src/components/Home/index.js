@@ -15,6 +15,8 @@ export default function () {
       height: 100vh;
       padding-top: ${(props) => props.theme.mensure.triple};
       padding-bottom: ${(props) => props.theme.mensure.triple};
+      padding-right: ${(props) => props.theme.mensure.double};
+      padding-left: ${(props) => props.theme.mensure.double};
    `;
 
    const Portfolio = styled(CircleSVG)`
