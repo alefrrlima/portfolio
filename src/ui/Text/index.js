@@ -8,6 +8,7 @@ export default function Text({ type, children, align }) {
       line-height: ${(props) => props.theme.height.fit};
       color: ${(props) => props.theme.color.dark};
       text-align: ${align};
+      cursor: default;
    `;
    const D2 = styled.span`
       font-size: ${(props) => props.theme.size.large};
@@ -15,6 +16,7 @@ export default function Text({ type, children, align }) {
       line-height: ${(props) => props.theme.height.fit};
       color: ${(props) => props.theme.color.light};
       text-align: ${align};
+      cursor: default;
    `;
    const D3 = styled.span`
       font-size: ${(props) => props.theme.size.medium};
@@ -22,6 +24,7 @@ export default function Text({ type, children, align }) {
       line-height: ${(props) => props.theme.height.medium};
       color: ${(props) => props.theme.color.primary};
       text-align: ${align};
+      cursor: default;
    `;
    const D4 = styled.span`
       font-size: ${(props) => props.theme.size.regular};
@@ -33,6 +36,7 @@ export default function Text({ type, children, align }) {
       width: fit-content;
       text-transform: uppercase;
       text-align: ${align};
+      cursor: default;
    `;
    const D5 = styled.span`
       font-size: ${(props) => props.theme.size.regular};
@@ -41,6 +45,25 @@ export default function Text({ type, children, align }) {
       color: ${(props) => props.theme.color.primary};
       text-transform: uppercase;
       text-align: ${align};
+      cursor: default;
+   `;
+   const Link = styled.span`
+      font-size: ${(props) => props.theme.size.regular};
+      font-weight: ${(props) => props.theme.weight.small};
+      line-height: ${(props) => props.theme.height.regular};
+      color: ${(props) => props.theme.color.light};
+      padding: ${(props) => props.theme.mensure.half};
+      border: 1px solid ${(props) => props.theme.color.light};
+      width: fit-content;
+      text-transform: uppercase;
+      text-align: ${align};
+      transition: 0.1s;
+      cursor: pointer;
+
+      &:hover {
+         color: ${(props) => props.theme.color.dark};
+         background-color: ${(props) => props.theme.color.light};
+      }
    `;
    const H1 = styled.span`
       font-size: ${(props) => props.theme.size.medium};
@@ -48,6 +71,7 @@ export default function Text({ type, children, align }) {
       line-height: ${(props) => props.theme.height.medium};
       color: ${(props) => props.theme.color.dark};
       text-align: ${align};
+      cursor: default;
    `;
    const P = styled.span`
       font-size: ${(props) => props.theme.size.regular};
@@ -55,6 +79,7 @@ export default function Text({ type, children, align }) {
       line-height: ${(props) => props.theme.height.regular};
       color: ${(props) => props.theme.color.dark};
       text-align: ${align};
+      cursor: default;
    `;
 
    switch (type) {
@@ -72,6 +97,9 @@ export default function Text({ type, children, align }) {
          break;
       case 'd5':
          return <D5>{children}</D5>;
+         break;
+      case 'link':
+         return <Link>{children}</Link>;
          break;
       case 'h1':
          return <H1>{children}</H1>;

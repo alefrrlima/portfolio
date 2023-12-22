@@ -5,6 +5,7 @@ import Home from '../Home';
 import About from '../About';
 import Tecnologies from '../Tecnologies';
 import Projects from '../Projects';
+import Contact from '../Contact';
 
 import dotedBackground from '../../images/doted-background.png';
 
@@ -17,7 +18,6 @@ export default function () {
       flex-direction: column;
       background: url(${dotedBackground});
       background-repeat: repeat;
-
       gap: ${(props) => props.theme.mensure.extra};
    `;
 
@@ -27,6 +27,7 @@ export default function () {
          <About />
          <Tecnologies />
          <Projects />
+         <Contact />
       </Portfolio>
    );
 }
