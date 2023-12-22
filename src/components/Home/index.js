@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Scroll from '../../ui/Scroll';
+
 import Text from '../../ui/Text';
 
 import { ReactComponent as CircleSVG } from '../../images/portfolio-circle.svg';
@@ -76,6 +78,7 @@ export default function () {
                <Text type="d3">Front-end</Text>
             </Complement>
          </Container>
+         <Scroll />
       </Home>
    );
 }
