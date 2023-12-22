@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Home from '../Home';
 import About from '../About';
 import Tecnologies from '../Tecnologies';
+import Projects from '../Projects';
 
 import dotedBackground from '../../images/doted-background.png';
 
@@ -25,6 +26,7 @@ export default function () {
          <Home />
          <About />
          <Tecnologies />
+         <Projects />
       </Portfolio>
    );
 }
