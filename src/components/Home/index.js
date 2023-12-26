@@ -26,16 +26,16 @@ export default function () {
       width: 95vh;
       position: absolute;
       left: -43vh;
-      animation: in 15s linear 0s infinite;
+      animation: forward 15s linear infinite;
 
-      /* @keyframes in {
+      @keyframes forward {
          from {
             transform: rotate(0deg);
          }
          to {
             transform: rotate(360deg);
          }
-      } */
+      }
    `;
 
    const Container = styled.div`
