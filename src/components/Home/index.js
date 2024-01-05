@@ -21,7 +21,7 @@ export default function () {
       padding-left: ${(props) => props.theme.mensure.double};
    `;
 
-   const Portfolio = styled(CircleSVG)`
+   const PortfolioCircle = styled(CircleSVG)`
       height: 95vh;
       width: 95vh;
       position: absolute;
@@ -66,7 +66,7 @@ export default function () {
 
    return (
       <Home>
-         <Portfolio />
+         <PortfolioCircle />
          <Container>
             <Name>
                <Text type="d1">Alexandre</Text>

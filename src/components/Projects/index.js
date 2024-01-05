@@ -24,6 +24,8 @@ export default function () {
       display: flex;
       flex-direction: column;
       gap: ${(props) => props.theme.mensure.extra};
+      width: 100%;
+      max-width: 500px;
    `;
 
    const Project = styled.div`
@@ -42,9 +44,14 @@ export default function () {
       display: flex;
       flex-direction: row;
       gap: ${(props) => props.theme.mensure.single};
+      flex-wrap: wrap;
    `;
 
-   const Image = styled.img``;
+   const Image = styled.img`
+      max-width: 833px;
+      flex: 1;
+      min-width: 300px;
+   `;
 
    return (
       <Projects>
