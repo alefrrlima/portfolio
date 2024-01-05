@@ -19,6 +19,11 @@ export default function () {
       padding-bottom: ${(props) => props.theme.mensure.triple};
       padding-right: ${(props) => props.theme.mensure.double};
       padding-left: ${(props) => props.theme.mensure.double};
+
+      @media (max-width: ${(props) => props.theme.screen.l}) {
+         padding-top: ${(props) => props.theme.mensure.extra};
+         padding-bottom: ${(props) => props.theme.mensure.extra};
+      }
    `;
 
    const PortfolioCircle = styled(CircleSVG)`
@@ -26,16 +31,14 @@ export default function () {
       width: 95vh;
       position: absolute;
       left: -43vh;
-      animation: forward 15s linear infinite;
 
-      /* @keyframes forward {
-         from {
-            transform: rotate(0deg);
-         }
-         to {
-            transform: rotate(360deg);
-         }
-      } */
+      @media (max-width: ${(props) => props.theme.screen.l}) {
+         height: 80vh;
+         width: 80vh;
+         left: -36vh;
+         max-width: 576px;
+         max-height: 576px;
+      }
    `;
 
    const Container = styled.div`
@@ -78,7 +81,7 @@ export default function () {
                <Text type="d3">Front-end</Text>
             </Complement>
          </Container>
-         <Scroll />
+         {/* <Scroll /> */}
       </Home>
    );
 }
