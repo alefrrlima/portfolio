@@ -33,7 +33,7 @@ export default function () {
       display: flex;
       flex-direction: column;
       gap: ${(props) => props.theme.mensure.double};
-      width: 35vw;
+      width: 40vw;
    `;
 
    const ImageContainer = styled.div`

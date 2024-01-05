@@ -30,6 +30,13 @@ const theme = {
       extra: '7.8125rem',
       fit: '80%',
    },
+   screen: {
+      xs: '320px',
+      s: '640px',
+      m: '768px',
+      l: '1024px',
+      xl: '1440px',
+   },
 };
 
 export default theme;

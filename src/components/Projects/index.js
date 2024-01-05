@@ -32,6 +32,7 @@ export default function () {
       display: flex;
       flex-direction: row;
       gap: ${(props) => props.theme.mensure.double};
+      flex-wrap: nowrap;
    `;
 
    const Main = styled.div`
@@ -50,7 +51,7 @@ export default function () {
    const Image = styled.img`
       max-width: 833px;
       flex: 1;
-      min-width: 300px;
+      min-width: 428px;
    `;
 
    return (

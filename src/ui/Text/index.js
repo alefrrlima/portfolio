@@ -9,6 +9,10 @@ export default function Text({ type, children, align }) {
       color: ${(props) => props.theme.color.dark};
       text-align: ${align};
       cursor: default;
+
+      @media (max-width: ${(props) => props.theme.screen.l}) {
+         font-size: ${(props) => props.theme.size.large};
+      }
    `;
    const D2 = styled.span`
       font-size: ${(props) => props.theme.size.large};
