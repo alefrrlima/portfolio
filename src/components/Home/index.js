@@ -28,14 +28,14 @@ export default function () {
       left: -43vh;
       animation: forward 15s linear infinite;
 
-      @keyframes forward {
+      /* @keyframes forward {
          from {
             transform: rotate(0deg);
          }
          to {
             transform: rotate(360deg);
          }
-      }
+      } */
    `;
 
    const Container = styled.div`
