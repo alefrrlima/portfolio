@@ -19,25 +19,62 @@ export default function () {
       padding-bottom: ${(props) => props.theme.mensure.triple};
       padding-right: ${(props) => props.theme.mensure.double};
       padding-left: ${(props) => props.theme.mensure.double};
-
-      @media (max-width: ${(props) => props.theme.screen.l}) {
-         padding-top: ${(props) => props.theme.mensure.extra};
-         padding-bottom: ${(props) => props.theme.mensure.extra};
-      }
    `;
 
    const PortfolioCircle = styled(CircleSVG)`
       height: 95vh;
       width: 95vh;
       position: absolute;
-      left: -43vh;
+      left: 0;
+      transform: translateX(-45%);
+      max-width: 80vh;
+      max-height: 80vh;
+      animation: spin 10s infinite linear, appear 1s;
+
+      @keyframes appear {
+         0% {
+            opacity: 0;
+         }
+
+         100% {
+            opacity: 100;
+         }
+      }
+
+      @keyframes spin {
+         0% {
+            transform: translateX(-45%);
+         }
+
+         100% {
+            transform: translateX(-45%) rotate(360deg);
+         }
+      }
 
       @media (max-width: ${(props) => props.theme.screen.l}) {
-         height: 80vh;
-         width: 80vh;
-         left: -36vh;
-         max-width: 576px;
-         max-height: 576px;
+         height: 95vw;
+         width: 95vw;
+      }
+
+      @media (max-width: ${(props) => props.theme.screen.s}) {
+         height: 140vw;
+         width: 140vw;
+      }
+
+      @media (max-width: ${(props) => props.theme.screen.xs}) {
+         max-width: 60vh;
+         max-height: 60vh;
+         transform: translateX(-45%) translatey(8%);
+
+         @keyframes spin {
+            0% {
+               transform: translateX(-45%);
+            }
+
+            100% {
+               transform: translateX(-45%) translatey(8%) rotate(360deg);
+            }
+         }
       }
    `;
 
@@ -55,6 +92,14 @@ export default function () {
       gap: ${(props) => props.theme.mensure.double};
       align-self: flex-start;
       height: 50%;
+
+      @media (max-width: ${(props) => props.theme.screen.l}) {
+         gap: ${(props) => props.theme.mensure.single};
+      }
+
+      @media (max-width: ${(props) => props.theme.screen.s}) {
+         gap: ${(props) => props.theme.mensure.half};
+      }
    `;
 
    const Complement = styled.div`
@@ -65,6 +110,10 @@ export default function () {
       justify-content: end;
       align-self: flex-end;
       height: 50%;
+
+      @media (max-width: ${(props) => props.theme.screen.s}) {
+         gap: ${(props) => props.theme.mensure.half};
+      }
    `;
 
    return (

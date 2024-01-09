@@ -13,6 +13,10 @@ export default function Text({ type, children, align }) {
       @media (max-width: ${(props) => props.theme.screen.l}) {
          font-size: ${(props) => props.theme.size.large};
       }
+
+      @media (max-width: ${(props) => props.theme.screen.s}) {
+         font-size: ${(props) => props.theme.size.medium};
+      }
    `;
    const D2 = styled.span`
       font-size: ${(props) => props.theme.size.large};
@@ -25,10 +29,15 @@ export default function Text({ type, children, align }) {
    const D3 = styled.span`
       font-size: ${(props) => props.theme.size.medium};
       font-weight: ${(props) => props.theme.weight.small};
-      line-height: ${(props) => props.theme.height.medium};
+      line-height: ${(props) => props.theme.height.fit};
       color: ${(props) => props.theme.color.primary};
       text-align: ${align};
       cursor: default;
+
+      @media (max-width: ${(props) => props.theme.screen.s}) {
+         font-size: ${(props) => props.theme.size.regular};
+         font-weight: ${(props) => props.theme.weight.regular};
+      }
    `;
    const D4 = styled.span`
       font-size: ${(props) => props.theme.size.regular};

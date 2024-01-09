@@ -31,7 +31,7 @@ const theme = {
       fit: '80%',
    },
    screen: {
-      xs: '320px',
+      xs: '440px',
       s: '640px',
       m: '768px',
       l: '1024px',
