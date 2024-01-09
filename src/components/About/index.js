@@ -19,21 +19,56 @@ export default function () {
       margin-top: ${(props) => props.theme.mensure.double};
       padding-right: ${(props) => props.theme.mensure.double};
       padding-left: ${(props) => props.theme.mensure.double};
+
+      @media (max-width: ${(props) => props.theme.screen.m}) {
+         padding-right: ${(props) => props.theme.mensure.triple};
+         padding-left: ${(props) => props.theme.mensure.triple};
+         flex-direction: column;
+         gap: ${(props) => props.theme.mensure.extra};
+         margin-top: unset;
+      }
+
+      @media (max-width: ${(props) => props.theme.screen.s}) {
+         padding-right: ${(props) => props.theme.mensure.double};
+         padding-left: ${(props) => props.theme.mensure.double};
+      }
+
+      @media (max-width: ${(props) => props.theme.screen.xs}) {
+         padding-right: ${(props) => props.theme.mensure.single};
+         padding-left: ${(props) => props.theme.mensure.single};
+      }
    `;
 
    const TextContainer = styled.div`
       display: flex;
       flex-direction: column;
       gap: ${(props) => props.theme.mensure.triple};
+      width: 50vw;
+
+      @media (max-width: ${(props) => props.theme.screen.l}) {
+         gap: ${(props) => props.theme.mensure.double};
+      }
+
+      @media (max-width: ${(props) => props.theme.screen.m}) {
+         width: 100%;
+      }
    `;
 
-   const AboutTitle = styled(AboutTitleSVG)``;
+   const AboutTitle = styled(AboutTitleSVG)`
+      @media (max-width: ${(props) => props.theme.screen.l}) {
+         width: 200px;
+         height: 65px;
+      }
+   `;
 
    const ComplementContainer = styled.div`
       display: flex;
       flex-direction: column;
       gap: ${(props) => props.theme.mensure.double};
-      width: 40vw;
+
+      @media (max-width: ${(props) => props.theme.screen.l}) {
+         gap: ${(props) => props.theme.mensure.single};
+      }
    `;
 
    const ImageContainer = styled.div`
@@ -42,10 +77,16 @@ export default function () {
       align-items: center;
       justify-content: center;
       position: relative;
-      max-width: 562px;
-      max-height: 562px;
-      width: 40vw;
-      height: 40vw;
+      max-width: 500px;
+      max-height: 500px;
+      width: 35vw;
+      height: 35vw;
+      align-self: center;
+
+      @media (max-width: ${(props) => props.theme.screen.m}) {
+         width: 50vw;
+         height: 50vw;
+      }
    `;
 
    const LargeCircle = styled(LargeCircleSVG)`

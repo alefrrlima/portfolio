@@ -25,9 +25,9 @@ export default function () {
       <Portfolio>
          <Home />
          <About />
-         <Tecnologies />
+         {/* <Tecnologies />
          <Projects />
-         <Contact />
+         <Contact /> */}
       </Portfolio>
    );
 }

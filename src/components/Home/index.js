@@ -19,6 +19,13 @@ export default function () {
       padding-bottom: ${(props) => props.theme.mensure.triple};
       padding-right: ${(props) => props.theme.mensure.double};
       padding-left: ${(props) => props.theme.mensure.double};
+
+      @media (max-width: ${(props) => props.theme.screen.m}) {
+         padding-top: ${(props) => props.theme.mensure.double};
+         padding-bottom: ${(props) => props.theme.mensure.double};
+         padding-right: ${(props) => props.theme.mensure.single};
+         padding-left: ${(props) => props.theme.mensure.single};
+      }
    `;
 
    const PortfolioCircle = styled(CircleSVG)`
@@ -72,7 +79,7 @@ export default function () {
             }
 
             100% {
-               transform: translateX(-45%) translatey(8%) rotate(360deg);
+               transform: translateX(-45%) translateY(8%) rotate(360deg);
             }
          }
       }

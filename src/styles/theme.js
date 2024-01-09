@@ -12,7 +12,7 @@ const theme = {
       extra: '6rem',
    },
    size: {
-      small: '1rem',
+      small: '1.25rem',
       regular: '1.625rem',
       medium: '3.125rem',
       large: '5.625rem',
