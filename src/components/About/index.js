@@ -44,6 +44,7 @@ export default function () {
       flex-direction: column;
       gap: ${(props) => props.theme.mensure.triple};
       width: 50vw;
+      max-width: 700px;
 
       @media (max-width: ${(props) => props.theme.screen.l}) {
          gap: ${(props) => props.theme.mensure.double};
